@@ -213,10 +213,6 @@ Sua doação ajuda a cuidar dos animais e manter o santuário.
 
 <button class="botao" onclick="mostrarPix()">Doar com PIX</button>
 
-<section id="doacao"> 
-
-<h2>Ajude o Santuário</h2>
-
 <p>
 Sua doação ajuda a cuidar dos animais e manter o santuário.
 </p>
@@ -225,11 +221,23 @@ Sua doação ajuda a cuidar dos animais e manter o santuário.
 Chave PIX: santuariofilhosdopai@gmail.com
 </p>
 
+<br>
+
+<img id="SAN-QR" src="SAN-QR.jpeg" style="display:none; width:200px; margin-top:15px;">
+
+</section>
+
+
 <script>
 
 function mostrarPix(){
+
 document.getElementById("pix").style.display = "block";
+document.getElementById("qrcode").style.display = "block";
+
 }
+
+</script>
 
 </script>
 
