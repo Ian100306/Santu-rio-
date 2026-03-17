@@ -16,67 +16,54 @@ background:#f4efe7;
 color:#333;
 }
 
-/* HEADER */
-
 header{
 text-align:center;
 background:#e6dac6;
-padding:40px;
+padding:30px 15px;
 }
 
 header img{
-width:180px;
+width:120px;
 }
 
 header h1{
 margin:10px;
-font-size:40px;
+font-size:28px;
 }
-
-/* FRASE BONITA */
 
 .frase{
 font-family:'Playfair Display', serif;
-font-size:28px;
+font-size:20px;
 color:#7a5c2e;
-margin-top:15px;
+margin-top:10px;
 letter-spacing:1px;
 font-style:italic;
 }
 
-/* MENU */
-
 nav{
 background:#b8935a;
-padding:15px;
+padding:10px;
 text-align:center;
 }
 
 nav a{
 color:white;
-margin:15px;
+margin:8px;
+display:inline-block;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 font-weight:bold;
 }
 
-nav a:hover{
-text-decoration:underline;
-}
-
-/* SEÇÕES */
-
 section{
-padding:60px;
+padding:30px 15px;
 text-align:center;
 }
 
-/* GALERIA */
-
 .galeria{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:10px;
 }
 
 .galeria img{
@@ -84,65 +71,75 @@ width:100%;
 border-radius:10px;
 }
 
-/* BOTÕES */
-
 .botao{
 background:#b8935a;
 color:white;
-padding:15px 25px;
+padding:12px 20px;
 border:none;
 border-radius:10px;
-font-size:18px;
+font-size:16px;
 cursor:pointer;
 }
-
-/* ORAÇÃO */
 
 .oracao{
 background:white;
 border-radius:10px;
-padding:30px;
-max-width:700px;
+padding:20px;
+max-width:100%;
 margin:auto;
 }
-
-/* FOOTER */
 
 footer{
 background:#333;
 color:white;
 text-align:center;
-padding:20px;
+padding:15px;
+font-size:14px;
 }
 
 .instagram{
 display:inline-block;
-margin-top:20px;
+margin-top:15px;
 background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
-padding:12px 25px;
+padding:10px 20px;
 border-radius:10px;
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* MOBILE */
-
-@media(max-width:700px){
-
-header{
-flex-direction:column;
-gap:10px;
+.whatsapp{
+display:inline-block;
+margin-top:10px;
+background:#25D366;
+padding:10px 20px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-.hero h1{
-font-size:32px;
+/* BOTÃO FLUTUANTE WHATSAPP (MOBILE STYLE) */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+border-radius:50%;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
 }
 
-.frase{
-font-size:22px;
-}
-
+.whatsapp-float:hover{
+background:#1ebe5d;
 }
 
 </style>
@@ -155,7 +152,7 @@ font-size:22px;
 
 <h1>Santuário Filhos do Pai</h1>
 
-<img src="ian/logo-santuario.png" width="150px" height="150px">
+<img src="ian/logo-santuario.png">
 
 <p class="frase">
 Um lugar de fé, amor e cuidado com a criação.
@@ -166,123 +163,70 @@ Um lugar de fé, amor e cuidado com a criação.
 </header>
 
 <nav>
-
 <a href="#sobre">Sobre</a>
 <a href="#oracoes">Orações</a>
 <a href="#galeria">Animais</a>
 <a href="#doacao">Doações</a>
 <a href="#contato">Contato</a>
-
 </nav>
 
 <section id="sobre">
-
 <h2>Sobre o Santuário</h2>
-
-<p>
-O Santuário Filhos do Pai é dedicado à proteção dos animais
-e à espiritualidade em harmonia com a natureza.
-</p>
-
+<p>O Santuário Filhos do Pai é dedicado à proteção dos animais e à espiritualidade em harmonia com a natureza.</p>
 </section>
 
 <section id="oracoes">
-
 <h2>Área de Orações</h2>
-
 <div class="oracao">
-
-<p>
-Pai amado, agradecemos pela vida, pela natureza e pelos animais
-que fazem parte da criação divina.
-</p>
-
-<p>
-Que possamos cuidar da terra com amor e respeito.
-Amém.
-</p>
-
+<p>Pai amado, agradecemos pela vida, pela natureza e pelos animais que fazem parte da criação divina.</p>
+<p>Que possamos cuidar da terra com amor e respeito. Amém.</p>
 </div>
-
 </section>
 
 <section id="galeria">
-
 <h2>Galeria de Animais</h2>
-
 <div class="galeria">
-
-<img src="ian/Cav1.png" width="100px" height="300px">
-<img src="ian/caca.jpeg" width="100px" height="300px">
-<img src="ian/cav2.jpeg" width="200px" height="300px">
-<img src="ian/pata2.jpeg" width="100px" height="300px">
-<img src="ian/Cav4.jpeg" width="200px" height="300px">
-<img src="ian/Cav5.jpeg" width="200px" height="300px">
-<img src="ian/Cav6.jpeg" width="100px" height="300px">
-<img src="ian/Cav7.jpeg" width="200px" height="300px">
-<img src="ian/Cav8.jpeg" width="200px" height="300px">
-
-
+<img src="ian/Cav1.png">
+<img src="ian/caca.jpeg">
+<img src="ian/cav2.jpeg">
+<img src="ian/pata2.jpeg">
+<img src="ian/Cav4.jpeg">
+<img src="ian/Cav5.jpeg">
+<img src="ian/Cav6.jpeg">
+<img src="ian/Cav7.jpeg">
+<img src="ian/Cav8.jpeg">
 </div>
-
-<p>Ajude esses animais, eles precisam da sua ajuda!.</p>
-
+<p>Ajude esses animais, eles precisam da sua ajuda!</p>
 </section>
 
 <section id="doacao">
-
 <h2>Ajude o Santuário</h2>
-
-<p>
-Sua doação ajuda a cuidar dos animais e manter o santuário.
-</p>
-
+<p>Sua doação ajuda a cuidar dos animais e manter o santuário.</p>
 <button class="botao" onclick="mostrarPix()">Doar com PIX</button>
-
-<p id="pix" style="display:none; margin-top:15px; font-weight:bold;">
-Chave PIX: santuariofilhosdopai@gmail.com
-</p>
-
+<p id="pix" style="display:none; margin-top:15px; font-weight:bold;">Chave PIX: santuariofilhosdopai@gmail.com</p>
 <br>
-
-<center>
-
 <img id="qrcode" src="ian/SAN-QR.jpeg" style="display:none; width:200px; margin-top:15px;">
-
-</center>
-
 </section>
-
 
 <script>
-
 function mostrarPix(){
-
 document.getElementById("pix").style.display = "block";
 document.getElementById("qrcode").style.display = "block";
-
 }
-
 </script>
-
-</script>
-
-</section>
 
 <section id="contato">
-
-<h2>Nosso Instagram</h2>
-
-<a class="instagram" href="https://www.instagram.com/santuariofp/" target="_blank">
-Visitar Instagram
-</a>
-
+<h2>Contato</h2>
+<a class="instagram" href="https://www.instagram.com/santuariofp/" target="_blank">Visitar Instagram</a>
+<br>
+<a class="whatsapp" href="https://wa.me/5584988018611?text=Olá,%20quero%20ajudar%20o%20santuário!" target="_blank">Falar no WhatsApp</a>
 </section>
 
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/5584988018611" target="_blank">💬</a>
+
 <footer>
-
 <p>© 2026 Santuário Filhos do Pai</p>
-
 </footer>
 
 </body>
