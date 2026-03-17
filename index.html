@@ -142,6 +142,21 @@ z-index:1000;
 background:#1ebe5d;
 }
 
+/* CENTRALIZAR QR CODE */
+.qrcode{
+display:block;
+margin-left:auto;
+margin-right:auto;
+width:200px;
+}
+
+/* AUMENTAR NO PC */
+@media(min-width:768px){
+.qrcode{
+width:300px;
+}
+}
+
 </style>
 
 </head>
@@ -205,13 +220,7 @@ Um lugar de fé, amor e cuidado com a criação.
 <button class="botao" onclick="mostrarPix()">Doar com PIX</button>
 <p id="pix" style="display:none; margin-top:15px; font-weight:bold;">Chave PIX: santuariofilhosdopai@gmail.com</p>
 <br>
-
-</center>
-
-<img id="qrcode" src="ian/SAN-QR.jpeg" style="display:none; width:200px; margin-top:15px;">
-
-<center>
-
+<img id="qrcode" src="ian/SAN-QR.jpeg" style="display:none; width:200px; margin:15px auto; display:none;" class="qrcode">
 </section>
 
 <script>
@@ -225,11 +234,11 @@ document.getElementById("qrcode").style.display = "block";
 <h2>Contato</h2>
 <a class="instagram" href="https://www.instagram.com/santuariofp/" target="_blank">Visitar Instagram</a>
 <br>
-<a class="whatsapp" href="https://wa.me/5584988018611?text=Olá,%20quero%20ajudar%20o%20santuário!" target="_blank">Falar no WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/5584999999999?text=Olá,%20quero%20ajudar%20o%20santuário!" target="_blank">Falar no WhatsApp</a>
 </section>
 
 <!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-float" href="https://wa.me/5584988018611" target="_blank">💬</a>
+<a class="whatsapp-float" href="https://wa.me/5584999999999" target="_blank">💬</a>
 
 <footer>
 <p>© 2026 Santuário Filhos do Pai</p>
@@ -238,3 +247,4 @@ document.getElementById("qrcode").style.display = "block";
 </body>
 
 </html>
+
