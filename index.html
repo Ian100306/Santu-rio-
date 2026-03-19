@@ -108,18 +108,7 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.whatsapp{
-display:inline-block;
-margin-top:10px;
-background:#25D366;
-padding:10px 20px;
-border-radius:10px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* BOTÃO FLUTUANTE WHATSAPP (MOBILE STYLE) */
+/* BOTÃO WHATSAPP */
 .whatsapp-float{
 position:fixed;
 bottom:20px;
@@ -142,21 +131,43 @@ z-index:1000;
 background:#1ebe5d;
 }
 
-/* CENTRALIZAR QR CODE */
+/* BOTÃO FORMULÁRIO REDONDO */
+.botao-form{
+position:fixed;
+bottom:90px;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#b8935a;
+color:white;
+font-size:26px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+transition:0.3s;
+}
+
+.botao-form:hover{
+background:#a07d45;
+transform:scale(1.1);
+}
+
+/* QR CODE */
 .qrcode{
 display:block;
-margin-left:auto;
-margin-right:auto;
+margin:auto;
 width:200px;
 }
 
-/* AUMENTAR NO PC */
 @media(min-width:768px){
 .qrcode{
 width:300px;
 }
 }
-
 </style>
 
 </head>
@@ -164,9 +175,7 @@ width:300px;
 <body>
 
 <header>
-
 <h1>Santuário Filhos do Pai</h1>
-
 <img src="ian/logo-santuario.png">
 
 <p class="frase">
@@ -174,7 +183,6 @@ Um lugar de fé, amor e cuidado com a criação.
 </p>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-
 </header>
 
 <nav>
@@ -188,15 +196,14 @@ Um lugar de fé, amor e cuidado com a criação.
 <section id="sobre">
 <h2>Sobre o Santuário</h2>
 <p>Salvando Vidas dos Grandes
-
-| Resgate e reabilitação de animais de grande porte vítimas de maus-tratos
-| Façamos a diferença!.</p>
+<br>Resgate e reabilitação de animais de grande porte vítimas de maus-tratos
+<br>Façamos a diferença!</p>
 </section>
 
 <section id="oracoes">
 <h2>Área de Orações</h2>
 <div class="oracao">
-<p>Pai amado, agradecemos pela vida, pela natureza e pelos animais que fazem parte da criação divina.</p>
+<p>Pai amado, agradecemos pela vida, pela natureza e pelos animais.</p>
 <p>Que possamos cuidar da terra com amor e respeito. Amém.</p>
 </div>
 </section>
@@ -219,11 +226,15 @@ Um lugar de fé, amor e cuidado com a criação.
 
 <section id="doacao">
 <h2>Ajude o Santuário</h2>
-<p>Sua doação ajuda a cuidar dos animais e manter o santuário.</p>
+<p>Sua doação ajuda a cuidar dos animais.</p>
+
 <button class="botao" onclick="mostrarPix()">Doar com PIX</button>
-<p id="pix" style="display:none; margin-top:15px; font-weight:bold;">Chave PIX: santuariofilhosdopai@gmail.com</p>
-<br>
-<img id="qrcode" src="ian/SAN-QR.jpeg" style="display:none; width:200px; margin:15px auto; display:none;" class="qrcode">
+
+<p id="pix" style="display:none; margin-top:15px; font-weight:bold;">
+Chave PIX: santuariofilhosdopai@gmail.com
+</p>
+
+<img id="qrcode" src="ian/SAN-QR.jpeg" style="display:none;" class="qrcode">
 </section>
 
 <script>
@@ -235,69 +246,69 @@ document.getElementById("qrcode").style.display = "block";
 
 <section id="equipe">
 <h2>Equipe do Santuário</h2>
-<p>Conheça as pessoas que fazem esse trabalho acontecer:</p>
 
-<div class="equipe">
 <div class="membro">
 <h3>Daniell dos cavalos</h3>
-<p>Função: Presidente </p>
+<p>Presidente</p>
 </div>
 
 <div class="membro">
 <h3>Ian César</h3>
-<p>Função: Vice-Presidente</p>
+<p>Vice-Presidente</p>
 </div>
 
 <div class="membro">
 <h3>Suzanny Castro</h3>
-<p>Função: Primeira secretária </p>
+<p>Primeira secretária</p>
 </div>
 
 <div class="membro">
 <h3>Landinha</h3>
-<p>Função: Segunda secretária </p>
+<p>Segunda secretária</p>
 </div>
 
 <div class="membro">
 <h3>Elianderson</h3>
-<p>Função: Tesoureiro</p>
+<p>Tesoureiro</p>
 </div>
 
 <div class="membro">
 <h3>Matheus</h3>
-<p>Função: Fiscal</p>
+<p>Fiscal</p>
 </div>
 
 <div class="membro">
 <h3>Eliseu</h3>
-<p>Função: Fiscal</p>
+<p>Fiscal</p>
 </div>
 
 <div class="membro">
 <h3>João Victor</h3>
-<p>Função: Fiscal</p>
+<p>Fiscal</p>
 </div>
-
-</div>
-
 </section>
 
 <section id="Instagram">
 <h2>Instagram⤵</h2>
-<a class="instagram" href="https://www.instagram.com/santuariofp/" target="_blank">Visitar Instagram</a>
-<br>
-
+<a class="instagram" href="https://www.instagram.com/santuariofp/" target="_blank">
+Visitar Instagram
+</a>
 </section>
 
-<!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-float" href="https://wa.me/5584981838510?text=Olá,%20gostaria%20de%20ajudar%20o%20santuário!!" target="_blank">💬</a>
+<!-- BOTÃO FORMULÁRIO -->
+<a class="botao-form" href="https://docs.google.com/forms/d/e/1FAIpQLSdG3fwZo1Q9QmjG42CHGjHG5pHoKt43hYUS96-MUXvfmCyhJQ/viewform" target="_blank">
+📋
+</a>
+
+<!-- BOTÃO WHATSAPP -->
+<a class="whatsapp-float" href="https://wa.me/5584981838510?text=Olá,%20gostaria%20de%20ajudar%20o%20santuário!!" target="_blank">
+💬
+</a>
 
 <footer>
 <p>© 2026 Santuário Filhos do Pai</p>
 </footer>
 
 </body>
-
 </html>
-
 
