@@ -227,12 +227,55 @@ body::before{content:"";position:fixed;top:0;left:0;width:var(--scroll-progress,
   .btn::after, .team-toggle::after { animation: none !important; }
 }
 
+
+/* ===== AJUSTES DO LOGO E DO PIX ===== */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  white-space:nowrap;
+}
+.brand img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+  border-radius:50%;
+  background:#fff;
+  padding:4px;
+  flex-shrink:0;
+  box-shadow:0 4px 14px rgba(61,46,30,.16);
+}
+.brand span{
+  display:block;
+  line-height:1.2;
+}
+.pix-main-btn{
+  min-width:190px;
+  gap:10px;
+}
+.pix-main-btn .pix-arrow{
+  font-size:19px;
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:transform .6s cubic-bezier(.16,1,.3,1);
+}
+.pix-main-btn:hover .pix-arrow{
+  transform:translateY(3px);
+}
+@media(max-width:520px){
+  .brand{gap:8px;font-size:14px}
+  .brand img{width:42px;height:42px}
+  .pix-main-btn{min-width:180px}
+}
+
 </style>
 </head>
 <body>
 <nav class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#inicio"><img src="Ian/logo-santuario.png" alt="logo-santuario"><span>Santuário Filhos do Pai</span></a>
+    <a class="brand" href="#inicio"><img src="Ian/logo-santuario.png" alt="Logo do Santuário Filhos do Pai"><span>Santuário Filhos do Pai</span></a>
     <div class="links">
       <a href="#sobre">Sobre</a><a href="#oracoes">Orações</a><a href="#galeria">Animais</a><a href="#doacao">Doações</a><a href="#equipe">Equipe</a><a href="#instagram">Instagram</a>
     </div>
@@ -283,7 +326,7 @@ body::before{content:"";position:fixed;top:0;left:0;width:var(--scroll-progress,
 <section class="donation" id="doacao"><div class="donation-box">
   <span class="section-label">Contribua</span><h2 class="section-title">Ajude o Santuário</h2>
   <p>Sua doação ajuda a cuidar dos animais — ração, veterinário e amor.</p>
-  <button class="btn" id="pixBtn">↓ Doar com PIX</button>
+  <button class="btn pix-main-btn" id="pixBtn"><span class="pix-arrow">↓</span><span class="pix-label">Doar com PIX</span></button>
   <div class="pix-area" id="pixArea"><strong>PIX do Santuário</strong><img src="Ian/pix.jpeg" alt="QR Code para doação PIX"><div class="pix-key"><code id="pixKey">santuariofilhosdopai@gmail.com</code><button class="copy" id="copyBtn">Copiar</button></div><p class="small" id="copyStatus">Aponte a câmera do celular para o QR Code ou copie a chave.</p></div>
 </div></section>
 
@@ -322,7 +365,7 @@ const pixBtn=document.getElementById('pixBtn'),pixArea=document.getElementById('
 pixBtn.addEventListener('click',()=>{
   const opening=!pixArea.classList.contains('show');
   pixArea.classList.toggle('show',opening);
-  pixBtn.textContent=opening?'✕ Fechar PIX':'▦ Doar com PIX';
+  pixBtn.innerHTML=opening?'<span class="pix-arrow">✕</span><span class="pix-label">Fechar PIX</span>':'<span class="pix-arrow">↓</span><span class="pix-label">Doar com PIX</span>';
   pixBtn.classList.remove('clicked'); void pixBtn.offsetWidth; pixBtn.classList.add('clicked');
   
 });
